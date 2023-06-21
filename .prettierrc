@@ -1,0 +1,8 @@
+{
+  "arrowParens": "avoid",
+  "astroAllowShorthand": false,
+  "endOfLine": "auto",
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none"
+}

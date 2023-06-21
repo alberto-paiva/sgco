@@ -6,16 +6,60 @@ dist/
 
 # dependencies
 node_modules/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
 
 # logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.log
 
 # environment variables
 .env
 .env.production
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
 # macOS-specific files
 .DS_Store
+
+# misc
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# Jetbrains
+/.idea/
+
+### VisualStudioCode ###
+.vscode/*
+
+# Ignore all local history of files
+.history
+.ionide
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# lock-files
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+
+# Ignored files
+*.not
