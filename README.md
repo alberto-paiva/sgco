@@ -8,14 +8,14 @@ Instituição: [ESAB - Escola Superior Aberta do Brasil](https://esab.edu.br/).
 
 ## Getting Started
 
-First, install dependencies:
+1. First, install dependencies:
 
 ```bash
 pnpm install
 ```
 _PNPM is the package manager._
 
-1. Launch the Astro local development server on `localhost:3000` by running the following command:
+2. Launch the Astro local development server on `localhost:3000` by running the following command:
 
 ```bash
 pnpm dev
