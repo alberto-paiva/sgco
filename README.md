@@ -12,6 +12,8 @@ _O diretório backend possui os arquivos PHP da API de dados e devem executados 
 
 _O diretório frontend possui os arquivos da aplicação WEB desenvolvida em REACT e devem executados com o NodeJS para compilação._
 
+O banco de dados utilizado foi o MySQL.
+
 Após compilar com o comando informado no ítem 4, pode ser executada em um servidor Apache sem a necessidade do NodeJS estar instalado.
 
 ## Getting Started
