@@ -23,7 +23,8 @@ export const Dashboard = ({ title = "Dashboard" }: HomeProps) => {
     }
   }, []);
 
-  const userLimited = user?.tipo === "C" || user?.tipo === undefined;
+  const userLimited =
+    AuthService.getCurrentUserField(UsuarioField.Tipo) === "C";
 
   const userIdUnidade = AuthService.getCurrentUserField(UsuarioField.IdUnidade);
 
@@ -39,9 +40,13 @@ export const Dashboard = ({ title = "Dashboard" }: HomeProps) => {
     };
 
     const getReceitas = async () => {
-      const response = await jca.list("financeiro", {
-        filter: ["tipo,eq,RECEITA", `idUnidade,eq,${userIdUnidade}`],
-      });
+      const response = userLimited
+        ? await jca.list("financeiro", {
+            filter: ["tipo,eq,RECEITA", `idUnidade,eq,${userIdUnidade}`],
+          })
+        : await jca.list("financeiro", {
+            filter: ["tipo,eq,RECEITA"],
+          });
       setReceitas(response.records);
     };
 
@@ -62,7 +67,7 @@ export const Dashboard = ({ title = "Dashboard" }: HomeProps) => {
     };
 
     const getCondominios = async () => {
-      console.log(user);
+      console.log(userLimited);
       const response = await jca.list("condominiocompleto", {
         filter: userLimited ? `id,eq,${userIdCondominio}` : "",
       });
