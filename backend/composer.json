@@ -1,0 +1,20 @@
+{
+  "name": "alp/sgcoapi",
+  "description": "API for SGCO APP!",
+  "type": "project",
+  "require": {
+    "mevdschee/php-crud-api": "^2.14",
+    "ext-mbstring": "*"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+    }
+  },
+  "authors": [
+    {
+      "name": "Alberto Paiva",
+      "email": "albertolpaiva@gmail.com"
+    }
+  ]
+}
